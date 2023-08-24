@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<link rel="stylesheet" href="paymentspagelight.css">
+<link rel="stylesheet" href="simple-calendar.css"> 
+<script src="simple-calendar.js" defer></script> 
+
+<script>
+    function toggleReminder() {
+  var reminderContent = document.getElementById("reminderContent");
+  if (reminderContent.style.display === "none") {
+    reminderContent.style.display = "block";
+  } else {
+    reminderContent.style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+<!--NAVBAR-->
+<div class="navBar">
+    <div>
+    <a href="homepagelight.html"><img class="htaLogo" src="hta.png"></a>
+    </div>
+
+    <input class="search" type="search" placeholder="Search">
+
+    <a href="homepagelight.html"><button class="topButton">Home</button></a>
+    <a href="subjectspagelight.html"><button class="topButton">Subjects</button></a>
+
+    <div class="darkMode">
+    <a href="paymentspagedark.html">
+    <button class="behindIconButton" href="paymentspagedark.html">
+    <img src="Darkmode.png">
+    <img class="darkmodeHover" src="Darkmodehover.png">
+    </button>
+    </a>
+    </div>
+
+    <div class="notification" onclick="toggleDropdown()">
+        <button class="behindIconButton">
+          <img src="notification.png">
+          <img class="notificationHover" src="Notificationhover.png">
+        </button>
+        <div class="dropdown-content" id="dropdownContent">
+          <!-- Dropdown content goes here -->
+          <span style="color:red;font-size:30px;">!</span> <a href="Sampleassignmentlight.html">ASSIGNMENT IN Animation 1</a>
+          <hr>
+          <span style="color:red;font-size:30px;">!</span> <a href="Sampleassignmentlight.html">ASSIGNMENT IN Computer Programming 2</a>
+        </div>
+        
+      </div>
+
+<nav class="profileButton"><!--Navigation Bar Starts Here-->
+    <ul>
+        <a href="#" class="display-picture"><img class="previmg" src="https://i.pravatar.cc/85" alt=""></a><!--Profile Image-->
+    </ul>
+        <div class="card hidden"><!--ADD TOGGLE HIDDEN CLASS ATTRIBUTE HERE-->
+    <ul><!--MENU-->
+        <li class="cardUsername">[USERNAME]</li>
+
+        <li><a href="profilepagelight.html"><button class="cardlink">Profile</button></a></li>
+        <li><a href="helppagelight.html"><button class="cardlink">Help & Support</button></a></li>
+        <li><a href="#"><button class="cardlink">Settings</button></a></li>
+
+        <li><a href="#"><button class="cardlink">Logout</button></a></li>
+    </ul>
+        </div>
+</nav><!--Navigation Bar Starts Here-->
+
+<!--LEFT COLUMN-->
+<div class="leftcol">
+    
+    <div class="wrapper"> 
+        <header> 
+            <p class="current-date"></p> 
+        <div class="icons"> 
+            <span id="prev" class="material-symbols-rounded"><p>&#60;</p></span> 
+            <span id="next" class="material-symbols-rounded"><p>&#62;</p></span> 
+        </div> 
+        </header> 
+        <div class="calendar"> 
+            <ul class="weeks"> <li>Sun</li> <li>Mon</li> 
+                    <li>Tue</li> <li>Wed</li> <li>Thu</li> <li>Fri</li> <li>Sat</li> </ul> <ul class="days">
+            </ul> 
+        </div> 
+    </div>
+
+    <div class="reminder-box">
+        <div class="reminder-header" onclick="toggleReminder()">Reminder <span class="downv">v</span> </div>
+        <div class="reminder-content" id="reminderContent">
+        <p>Latest Announcements:</p>
+        <p>Examinations in May 17</p>
+    </div>
+    </div>
+
+</div>
+<!--CENTRAL CONTENT-->
+<div class="content">
+    <p class="contentTitle">Payments</p>
+
+<div class="paymenthouse">
+<div class="eInformation">
+    <p class="headerp">Enrollment Information</p>
+    <div>
+    <p>Enrollment Status:</p>
+    <p class="enrolled">Enrolled</p>
+    </div>
+    <div class="rmarks">
+    <p>Registrar Remarks:</p>
+    <p>
+        You are now successfully registered.  Kindly proceed to payment form for bank details. 
+        Thank You. New students are required to submit birth certificate and report card to sampleEmail@email.com.
+    </p>
+    </div>
+    <div class="inbox">
+    </div>
+</div>
+
+<div class="pInformation">
+    <p class="headerp">Payment Information</p>
+    <div class="order">
+        <p>View</p>
+        <p>Payment Entry</p>
+        <p>Date</p>
+        <p>Status</p>
+    </div>
+    <div class="inbox2">
+        <p>JS Prom</p>
+        <p>PHP5000</p>
+        <p>March 25, 2023</p>
+        <p>Paid</p>
+    </div>
+</div>
+</div>
+
+</div>
+<script>
+    function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdownContent");
+    if (dropdownContent.style.display === "none") {
+      dropdownContent.style.display = "block";
+    } else {
+      dropdownContent.style.display = "none";
+    }
+  }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let card = document.querySelector(".card"); //declearing profile card element
+        let displayPicture = document.querySelector(".display-picture"); //declearing profile picture
+
+        displayPicture.addEventListener("click", function() { //on click on profile picture toggle hidden class from css
+            card.classList.toggle("hidden");
+        });
+    });
+</script>
+</body>
+</html>

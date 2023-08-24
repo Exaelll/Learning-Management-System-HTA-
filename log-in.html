@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrinityLMS</title>
+<link rel="stylesheet" href="log-in_style.css">
+
+<style>@import url('https://fonts.cdnfonts.com/css/horizon');</style>
+
+
+</head>
+<body>
+<!--NAVBAR-->
+<div class="navBar">
+<div>
+    <center><a href="homepagelight.html"><img class="htaLogo" src="hta.png"></a></center>
+</div>
+    
+
+<!--CENTRAL CONTENT-->
+<div class="content">
+
+</div>
+
+<div class="godown">
+<center><form id="loginForm">
+    <div>
+    <input type="text" id="username" name="username" placeholder="Username"required><br><br>
+    </div>
+    <input type="password" id="password"  name="password" placeholder="Password" required><br><br>
+
+    <input href="homepagelight.html" type="submit" value="LOG-IN">
+</form></center>
+</div>
+  
+<script>
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+     var username = document.getElementById("username").value;
+     var password = document.getElementById("password").value;
+
+    if (username === "admin" && password === "123") {
+    window.location.href = "homepagelight.html";
+
+  } else {
+    alert("Invalid username or password. Please try again.");
+  }
+    });
+
+
+</script>
+
+</body>
+</html>

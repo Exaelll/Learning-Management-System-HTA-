@@ -1,0 +1,132 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrinityLMS</title>
+<link rel="stylesheet" href="Schedulepagedark.css">
+<link rel="stylesheet" href="Simple-calendardark.css"> 
+<script src="Simple-calendar.js" defer></script> 
+
+<style>@import url('https://fonts.cdnfonts.com/css/roboto');</style>
+
+<script>
+    function toggleReminder() {
+  var reminderContent = document.getElementById("reminderContent");
+  if (reminderContent.style.display === "none") {
+    reminderContent.style.display = "block";
+  } else {
+    reminderContent.style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+<!--NAVBAR-->
+<div class="navBar">
+    <div>
+    <a href="homepagedark.html"><img class="htaLogo" src="hta.png"></a>
+    </div>
+
+    <input class="search" type="search" placeholder="Search">
+
+    <a href="homepagedark.html"><button class="topButton">Home</button></a>
+    <a href="subjectspagedark.html"><button class="topButton">Subjects</button></a>
+
+    <div class="darkMode">
+    <a href="Schedulepagelight.html">
+    <button class="behindIconButton">
+    <img src="Lightmode.png">
+    <img class="darkmodeHover" src="Lightmodehover.png">
+    </button>
+    </a>
+    </div>
+
+    <div class="notification" onclick="toggleDropdown()">
+        <button class="behindIconButton">
+          <img src="notification.png">
+          <img class="notificationHover" src="Notificationhover.png">
+        </button>
+        <div class="dropdown-content" id="dropdownContent">
+          <!-- Dropdown content goes here -->
+          <span style="color:red;font-size:30px;">!</span> <a href="Animation.html">ASSIGNMENT IN Animation 1</a>
+          <hr>
+          <span style="color:red;font-size:30px;">!</span> <a href="Computerprogramming.html">ASSIGNMENT IN Computer Programming 2</a>
+        </div>
+        
+      </div>
+
+<nav class="profileButton"><!--Navigation Bar Starts Here-->
+    <ul>
+        <a href="#" class="display-picture"><img class="previmg" src="https://i.pravatar.cc/85" alt=""></a><!--Profile Image-->
+    </ul>
+        <div class="card hidden"><!--ADD TOGGLE HIDDEN CLASS ATTRIBUTE HERE-->
+    <ul><!--MENU-->
+        <li class="cardUsername">[USERNAME]</li>
+
+        <li><a href="profilepagelight.html"><button class="cardlink">Profile</button></a></li>
+        <li><a href="helppagelight.css"><button class="cardlink">Help & Support</button></a></li>
+        <li><a href="#"><button class="cardlink">Settings</button></a></li>
+
+        <li><a href="log-in.html"><button class="cardlink">Logout</button></a></li>
+    </ul>
+        </div>
+</nav><!--Navigation Bar Starts Here-->
+
+<!--LEFT COLUMN-->
+<div class="leftcol">
+    
+  <!--Calendar-->
+  <div class="wrapper"> 
+    <header> 
+        <p class="current-date"></p> 
+    <div class="icons"> 
+        <span id="prev" class="material-symbols-rounded"><p>&#60;</p></span> 
+        <span id="next" class="material-symbols-rounded"><p>&#62;</p></span> 
+    </div> 
+    </header> 
+    <div class="calendar"> 
+        <ul class="weeks"> <li>Sun</li> <li>Mon</li> 
+                <li>Tue</li> <li>Wed</li> <li>Thu</li> <li>Fri</li> <li>Sat</li> </ul> <ul class="days">
+        </ul> 
+    </div> 
+</div> 
+
+    <div class="reminder-box">
+        <div class="reminder-header" onclick="toggleReminder()">Reminder <span class="downv">v</span> </div>
+        <div class="reminder-content" id="reminderContent">
+        <p>Latest Announcements:</p>
+        <p>Examinations in May 17</p>
+    </div>
+    </div>
+
+</div>
+<!--CENTRAL CONTENT-->
+<div class="content">
+<p class="contentTitle">Schedule</p>
+
+<div class="calndarmain">
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23039BE5&ctz=Asia%2FManila&title=School%20Events&src=Y29ucmV5YmVybmFyZG8xQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #404040" width="1200" height="500" frameborder="0" scrolling="yes"></iframe>
+</div>
+
+</div>
+<script>
+    function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdownContent");
+    if (dropdownContent.style.display === "none") {
+      dropdownContent.style.display = "block";
+    } else {
+      dropdownContent.style.display = "none";
+    }
+  }
+  </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let card = document.querySelector(".card"); //declearing profile card element
+        let displayPicture = document.querySelector(".display-picture"); //declearing profile picture
+
+        displayPicture.addEventListener("click", function() { //on click on profile picture toggle hidden class from css
+            card.classList.toggle("hidden");
+        });
+    });
+</script>
+</body>
+</html>

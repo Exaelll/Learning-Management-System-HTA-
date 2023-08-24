@@ -1,0 +1,109 @@
+@import url('https://fonts.cdnfonts.com/css/roboto');
+* {
+    margin:0; padding:0;
+    font-family:'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    z-index: 0;
+    overflow: hidden;
+    background-image: url("https://media.discordapp.net/attachments/1100832179061276724/1106979762678792262/login_bg.png?width=993&height=558");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*NAVIGATION BAR*/
+
+.navBar {
+    height:90px;width:100%;
+    background-color:#004AAD;
+    border-bottom:3px solid black;
+}
+
+.htaLogo{
+    height:169px;width:169px;
+    margin-left:-82px;
+    margin-right:auto;
+    margin-top:16px;
+    position:absolute;
+    cursor:pointer;
+    z-index:1;
+}
+
+#loginForm {
+    width: 500px;
+    padding: 25px;
+    background-color: #f1f1f1;
+    border-radius: 2%;
+    font-family:'Roboto', sans-serif;
+    display: block;
+    border: none;
+    border-radius: 20px;
+    font-size: 26px;
+
+  }
+
+  #username::placeholder {
+    color: rgb(255, 255, 255);
+  }
+
+  #password::placeholder {
+    color: rgb(255, 255, 255); 
+  }
+  
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4%;
+    font-family:'Roboto', sans-serif;
+    width: 800px;
+  }
+  
+  .translucent-form input[type="text"],
+  .translucent-form input[type="email"],
+  .translucent-form input[type="submit"] {
+
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%; height: 70%;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 26px;
+    background-color: #888888;
+    color: #f7f7f7;
+  }
+  
+  input[type="submit"] {
+    width: 100%; height: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 26px;
+    margin-bottom: 3%;
+    background-color: #004AAD;
+    color: #ffffff;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #4562a0;
+    
+  }
+  
+  .godown {
+   margin: auto; 
+   padding-top: 267px;
+}

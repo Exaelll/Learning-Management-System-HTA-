@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<link rel="stylesheet" href="helppagedark.css">
+<link rel="stylesheet" href="simple-calendardark.css"> 
+<script src="simple-calendar.js" defer></script> 
+
+<style>@import url('https://fonts.cdnfonts.com/css/roboto');</style>
+
+<script>
+    function toggleReminder() {
+  var reminderContent = document.getElementById("reminderContent");
+  if (reminderContent.style.display === "none") {
+    reminderContent.style.display = "block";
+  } else {
+    reminderContent.style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+<!--NAVBAR-->
+<div class="navBar">
+    <div>
+    <a href="homepagedark.html"><img class="htaLogo" src="hta.png"></a>
+    </div>
+
+    <input class="search" type="search" placeholder="Search">
+
+    <a href="homepagedark.html"><button class="topButton">Home</button></a>
+    <a href="subjectspagedark.html"><button class="topButton">Subjects</button></a>
+
+    <div class="darkMode">
+    <a href="helppagelight.html">
+    <button class="behindIconButton">
+    <img src="Lightmode.png">
+    <img class="darkmodeHover" src="Lightmodehover.png">
+    </button>
+    </a>
+    </div>
+
+    <div class="notification">
+        <button class="behindIconButton">
+        <img src="notification.png">
+        <img class="notificationHover" src="Notificationhover.png">
+        </button>
+    </div>
+
+<nav class="profileButton"><!--Navigation Bar Starts Here-->
+    <ul>
+        <a href="#" class="display-picture"><img class="previmg" src="https://i.pravatar.cc/85" alt=""></a><!--Profile Image-->
+    </ul>
+        <div class="card hidden"><!--ADD TOGGLE HIDDEN CLASS ATTRIBUTE HERE-->
+    <ul><!--MENU-->
+        <li class="cardUsername">[USERNAME]</li>
+
+        <li><a href="profilepagedark.html"><button class="cardlink">Profile</button></a></li>
+        <li><a href="helppagedark.html"><button class="cardlink">Help & Support</button></a></li>
+        <li><a href="#"><button class="cardlink">Settings</button></a></li>
+
+        <li><a href="log-in.html"><button class="cardlink">Logout</button></a></li>
+    </ul>
+        </div>
+</nav><!--Navigation Bar Starts Here-->
+
+<!--LEFT COLUMN-->
+<div class="leftcol">
+    
+    <div class="wrapper"> 
+        <header> 
+            <p class="current-date"></p> 
+        <div class="icons"> 
+            <span id="prev" class="material-symbols-rounded"><p>&#60;</p></span> 
+            <span id="next" class="material-symbols-rounded"><p>&#62;</p></span> 
+        </div> 
+        </header> 
+        <div class="calendar"> 
+            <ul class="weeks"> <li>Sun</li> <li>Mon</li> 
+                    <li>Tue</li> <li>Wed</li> <li>Thu</li> <li>Fri</li> <li>Sat</li> </ul> <ul class="days">
+            </ul> 
+        </div> 
+    </div> 
+
+    <div class="reminder-box">
+        <div class="reminder-header" onclick="toggleReminder()">Reminder <span class="downv">v</span> </div>
+        <div class="reminder-content" id="reminderContent">
+        <p>Latest Announcements:</p>
+        <p>Examinations in May 17</p>
+    </div>
+    </div>
+
+</div>
+<!--CENTRAL CONTENT-->
+<div class="content">
+    <p class="contentTitle">Help & Support</p>
+
+<form id="support">    
+    <input type="radio" name="Button" class="ButtonState" checked id="Button1" value="1"/>
+
+<label class="Button" for="Button1">School</label>
+<input type="radio" name="Button" class="ButtonState" id="Button2" value="2"/>
+<label class="Button" for="Button2">LMS</label>
+<input type="radio" name="Button" class="ButtonState" id="Button3" value="3"/>
+<label class="Button" for="Button3">Other</label>
+
+
+    <input class="input1" type="text" placeholder="Name" required><br>
+    <input class="input2" type="email" placeholder="Email Address" required><br>
+    <textarea class="input3" name="" id="" cols="30" rows="10" placeholder="Concern" require></textarea>
+
+<input class="submit" type="submit" onclick="submitted()">
+</form>
+        
+</div>
+<script>
+    var form = document.getElementById('support');
+
+function submitted() {
+  if (form.checkValidity()) {
+    alert("Your submission will be reviewed");
+  }
+}
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let card = document.querySelector(".card"); //declearing profile card element
+        let displayPicture = document.querySelector(".display-picture"); //declearing profile picture
+
+        displayPicture.addEventListener("click", function() { //on click on profile picture toggle hidden class from css
+            card.classList.toggle("hidden");
+        });
+    });
+</script>
+</body>
+</html>
